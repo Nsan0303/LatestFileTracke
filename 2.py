@@ -14,13 +14,14 @@ def button1_clicked():
 
 # button2クリック時の処理
 def button2_clicked():
-    condition = "最新版"
-    files = []
-    for b in os.listdir(file1.get()):
-        if condition in b:
-            files.append(b)
-        if files:
-            messagebox.showinfo("Title", "\n".join(files))
+    list1 = os.listdir(file1)
+    print(list1)
+    conditions = '最新版'
+    if list1 in [conditions]:
+        print('True')
+    else:
+        print('False')
+
 if __name__ == '__main__':
     # rootの作成
     root = Tk()
