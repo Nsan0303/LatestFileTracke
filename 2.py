@@ -5,7 +5,7 @@ from tkinter import filedialog
 from tkinter import messagebox
 import glob
 # 参照ボタンのイベント
-# button1クリック時の処理
+# button1クリック時の処理 C:\Users\sazan2312\Desktop\project\pthon\LatestFileTracke-main\test
 def button1_clicked():
     fTyp = [("", "")]
     iDir = os.path.abspath(os.path.dirname(__file__))
@@ -14,13 +14,15 @@ def button1_clicked():
 
 # button2クリック時の処理
 def button2_clicked():
-    list1 = os.listdir(file1)
-    print(list1)
+    list1 = os.listdir("C:\\Users\\sazan2312\\Desktop\project\\pthon\\LatestFileTracke-main\\test")
+    print()
     conditions = '最新版'
-    if list1 in [conditions]:
-        print('True')
-    else:
-        print('False')
+
+    for udon in list1:
+        if conditions in udon:
+            print(udon)
+        else:
+            print("false")
 
 if __name__ == '__main__':
     # rootの作成
